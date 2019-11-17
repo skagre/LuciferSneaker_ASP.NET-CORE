@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "DonHang";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-md-12 text-center" style="margin-bottom: 20px;">
+    <h4 style="font-weight: 700;">Danh sách đơn hàng</h4>
+</div>
+
+<div class="col-md-12 text-center" style="padding: 0 20px;">
+    <table class="table table-striped" style="width: 100%;">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Ngày đặt</th>
+                <th>Tổng tiền</th>
+                <th>Chức năng</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{ int i = 1; }
+            @foreach (var dh in Model)
+            {
+                <tr>
+                    <td>@i</td>
+                    <td>@dh.NgayDat</td>
+                    <td>@dh.TongTien.ToString("#,###") VND</td>
+                    <td>
+                        <a asp-action="ChiTietDonHang" asp-route-id="@dh.DonHangID">Chi tiết</a>
+                    </td>
+                </tr>
+                i++;
+            }
+        </tbody>
+    </table>
+</div>
+

@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+<div class="col-md-12" style="margin-bottom: 20px;">
+    <h4 style="float: left; font-weight: 700;">DANH SÁCH GIÀY</h4>
+    <a asp-action="ThemGiay" class="btn" style="float: right; background-color: #f97f51; color: white;">Thêm giày</a>
+</div>
+
+<div class="row" style="padding: 0 20px;">
+    @foreach (var g in Model)
+    {
+        <div class="col-md-3" style="margin-bottom: 20px;">
+            <div class="card">
+                <a asp-action="ChiTietGiay" asp-route-id="@g.GiayID" style="text-decoration: none; color: black;">
+                    <img class="card-img-top" src="~/images/@g.Anh" alt="ảnh lỗi" style="padding: 15px; height: 180px; width: 100%;">
+                    <div class="card-body" style="background-color: #f9f9f9;">
+                        <h6 class="card-title" style="font-weight: 500;">@g.TenGiay</h6>
+                        <p style="font-size: 20px; font-weight: 700;">@g.Gia.ToString("#,###") VND</p>
+                    </div>
+                </a>
+                <div class="card-footer text-center">
+                    <a asp-action="SuaGiay" asp-route-id="@g.GiayID" class="btn btn-warning">Sửa</a>
+                    <a asp-action="XoaGiay" asp-route-id="@g.GiayID" class="btn btn-danger">Xóa</a>
+                </div>
+            </div>
+
+        </div>
+    }
+</div>
+
+

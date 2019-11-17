@@ -1,0 +1,43 @@
+﻿@model Giay
+@{
+    ViewData["Title"] = "ChiTietGiay";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="col-md-12 text-center" style="margin-bottom: 20px;">
+    <h2>Chi tiết giày</h2>
+</div>
+<div class="col-md-12">
+    <h2 style="font-weight: 700; margin-left: 10px;">@Model.TenGiay</h2>
+</div>
+<div class="row" style="padding: 0 20px;">
+    <div class="col-md-6">
+        <img src="~/images/@Model.Anh" alt="ảnh lỗi" style="width: 100%;">
+    </div>
+    <div class="col-md-6" style="padding: 100px;">
+        <ul>
+            <li>@Model.Style</li>
+            <li>Màu: @Model.MauSac</li>
+            <li>Giá bán: <span style="font-size: 20px; font-weight: 700;">@Model.Gia.ToString("#,###") VND</span></li>
+            <li>
+                Trạng thái:
+                @if (Model.TrangThai == true)
+                {
+                    <span style="color: green;">Còn hàng</span>
+                }
+                else
+                {
+                    <span style="color: red;">Hết hàng</span>
+                }
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-12">
+        <h2>Mô tả</h2>
+        <p>@Model.MoTa</p>
+    </div>
+</div>
+
+
+

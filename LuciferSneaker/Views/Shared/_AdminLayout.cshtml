@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin | Lucifer Sneaker</title>
+    <link href="~/bootstrap-4.3.1-dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Muli', sans-serif;
+        }
+    </style>
+
+    <ul class="nav justify-content-center" style="background-color: #f97f51; line-height: 60px;">
+        <li class="nav-item">
+            <a asp-action="Index" style="text-decoration: none;">
+                <small style="font-size: 20px; font-weight: 700; color: white;">Lucifer Sneaker | Admin</small>
+            </a>
+        </li>
+    </ul>
+
+    <div class="row">
+        <div class="col-md-8 offset-md-2 text-right" style="margin-top: 20px;">
+            <img src="~/images/avt.png" alt="avatar" style="width: 40px; border-radius: 50%;" />
+            <span>Lucifer Sneaker | </span>
+            <a asp-action="DangXuat">Đăng xuất</a>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="margin: 50px 0;">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="row">
+                    <div class="col-md-3" style="border-right: 1px solid black;">
+                        <h4 style="color: #f97f51;">Quản lý bán hàng</h4>
+                        <ul style="list-style: none;">
+                            <li><a asp-action="Giay" style="text-transform: uppercase; text-decoration: none; color: black; font-weight: 700; font-size: 18px; padding: 5px 0; display: block; width: 100%;">Giày</a></li>
+                            <li><a asp-action="LoaiGiay" style="text-transform: uppercase; text-decoration: none; color: black; font-weight: 700; font-size: 18px; padding: 5px 0; display: block; width: 100%;">Loại giày</a></li>
+                            <li><a asp-action="DonHang" style="text-transform: uppercase; text-decoration: none; color: black; font-weight: 700; font-size: 18px; padding: 5px 0; display: block; width: 100%;">Đơn hàng</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row">
+
+                            @RenderBody()
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+
+    <div class="footer" style="text-align: center; padding: 20px; display: table; width: 100%;">
+        <small style="text-align: center; display: block;">Lucifer Sneaker | Shop Chuyên các sản phẩm về Sneakers và Fashions</small>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿@model GioHangViewModel
+@{
+    ViewData["Title"] = "ShoppingCart";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<div class="container" style="margin: 50px auto;">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 style="font-weight: 700; margin-bottom: 50px; text-align: center;">GIỎ HÀNG CỦA BẠN</h4>
+        </div>
+
+        <table class="text-center" style="width: 100%; margin-bottom: 20px;">
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>TÊN SẢN PHẨM</th>
+                    <th>SỐ LƯỢNG</th>
+                    <th>GIÁ</th>
+                    <th>THÀNH TIỀN</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var g in Model.GioHang.ChiTietGioHang)
+                {
+                    <tr style="border-bottom: 1px solid black; height: 150px;">
+                        <td style="width: 10%;">
+                            <img src="@g.Giay.Anh" alt="lỗi ảnh" style="width: 100%;">
+                        </td>
+                        <td style="width: 38%;">@g.Giay.TenGiay</td>
+                        <td style="width: 12%;">
+                            <div class="input-group">
+                                <input type="text" class="form-control text-center" value="@g.SoLuong">
+                                <div class="input-group-append">
+                                    <a asp-action="ThemGiayVaoGioHang" asp-route-id="@g.Giay.GiayID" class="btn btn-outline-secondary">+</a>
+                                    <a asp-action="XoaGiayKhoiGioHang" asp-route-id="@g.Giay.GiayID" class="btn btn-outline-secondary">-</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="width: 20%;">@g.Giay.Gia.ToString("#,###") VND</td>
+                        @{ decimal tong = @g.SoLuong * @g.Giay.Gia; }
+                        <td style="width: 20%; color: red;">@tong.ToString("#,###") VND</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="col-md-6 text-left">
+            <a asp-action="Index" style="font-size: 20px;">Tiếp tục mua hàng</a>
+        </div>
+        <div class="col-md-6 text-right">
+            <p style="font-size: 20px;">Tạm tính: <span style="color: red; font-size: 20px;">@Model.TongTienGioHang.ToString("#,###") VND</span></p>
+        </div>
+
+        <div class="col-md-12 text-right">
+            <a asp-action="DatHang" class="btn btn-danger" style="padding: 20px 12px">THANH TOÁN NGAY</a>
+        </div>
+    </div>
+</div>
+

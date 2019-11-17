@@ -1,0 +1,11 @@
+E:\LuciferSneaker\LuciferSneaker\LuciferSneaker\bin\Debug\netcoreapp2.0\LuciferSneaker.deps.json
+E:\LuciferSneaker\LuciferSneaker\LuciferSneaker\bin\Debug\netcoreapp2.0\LuciferSneaker.runtimeconfig.json
+E:\LuciferSneaker\LuciferSneaker\LuciferSneaker\bin\Debug\netcoreapp2.0\LuciferSneaker.runtimeconfig.dev.json
+E:\LuciferSneaker\LuciferSneaker\LuciferSneaker\bin\Debug\netcoreapp2.0\LuciferSneaker.dll
+E:\LuciferSneaker\LuciferSneaker\LuciferSneaker\obj\Debug\netcoreapp2.0\LuciferSneaker.csprojAssemblyReference.cache
+E:\LuciferSneaker\LuciferSneaker\LuciferSneaker\obj\Debug\netcoreapp2.0\LuciferSneaker.csproj.CoreCompileInputs.cache
+E:\LuciferSneaker\LuciferSneaker\LuciferSneaker\obj\Debug\netcoreapp2.0\LuciferSneaker.AssemblyInfoInputs.cache
+E:\LuciferSneaker\LuciferSneaker\LuciferSneaker\obj\Debug\netcoreapp2.0\LuciferSneaker.AssemblyInfo.cs
+E:\LuciferSneaker\LuciferSneaker\LuciferSneaker\bin\Debug\netcoreapp2.0\LuciferSneaker.pdb
+E:\LuciferSneaker\LuciferSneaker\LuciferSneaker\obj\Debug\netcoreapp2.0\LuciferSneaker.dll
+E:\LuciferSneaker\LuciferSneaker\LuciferSneaker\obj\Debug\netcoreapp2.0\LuciferSneaker.pdb

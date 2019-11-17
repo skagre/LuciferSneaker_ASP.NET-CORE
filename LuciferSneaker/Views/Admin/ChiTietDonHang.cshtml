@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "ChiTietDonHang";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-md-12 text-center" style="margin-bottom: 20px;">
+    <h4 style="font-weight: 700;">Chi tiết đơn hàng</h4>
+</div>
+
+<div class="col-md-12 text-center" style="padding: 0 20px;">
+    <table class="table table-striped" style="width: 100%;">
+        <thead>
+            <tr>
+                <th>Họ tên</th>
+                <th>Email</th>
+                <th>Số điện thoại</th>
+                <th>Địa chỉ</th>
+                <th>Tổng tiển</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.HoTen</td>
+                <td>@Model.Email</td>
+                <td>@Model.SoDienThoai</td>
+                <td>@Model.DiaChi</td>
+                <td>@Model.TongTien.ToString("#,###") VND</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,56 @@
+﻿@model LoaiGiay
+@{
+    ViewData["Title"] = "LoaiGiay";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="col-md-12 text-center" style="margin-bottom: 20px;">
+    <h4 style="font-weight: 700;">Thêm mới loại giày</h4>
+</div>
+<div class="col-md-12">
+    <form asp-action="ThemLoaiGiay" method="post" style="padding: 0 20px; border-bottom: 1px solid black; width: 100%;">
+        <div class="form-row">
+            <div class="form-group col-md-8">
+                <label>Loại giày</label>
+                <input asp-for="TenLoaiGiay" type="text" class="form-control" placeholder="Nhập loại giày">
+            </div>
+            <div class="form-group col-md-4">
+                <label>&nbsp;</label>
+                <button type="submit" class="form-control btn btn-primary">Thêm loại giày</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="col-md-12 text-center" style="margin: 20px auto;">
+    <h4 style="font-weight: 700;">Danh sách loại giày</h4>
+</div>
+
+<table class="table table-striped" style="text-align: center; margin: 0 20px;">
+    <thead>
+        <tr>
+            <th scope="col">STT</th>
+            <th scope="col">Tên loại giày</th>
+            <th scope="col">Chức năng</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{ int i = 1; }
+        @foreach (var lg in ViewBag.loaiGiay)
+        {
+            <tr>
+                <th scope="row">@i</th>
+                <td>@lg.TenLoaiGiay</td>
+                <td>
+                    <a asp-action="SuaLoaiGiay" asp-route-id="@lg.LoaiGiayID">Sửa</a>
+                    <span>|</span>
+                    <a asp-action="XoaLoaiGiay" asp-route-id="@lg.LoaiGiayID">Xóa</a>
+                </td>
+            </tr>
+            i++;
+        }
+
+    </tbody>
+</table>
+

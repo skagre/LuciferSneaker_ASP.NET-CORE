@@ -1,0 +1,69 @@
+﻿@model Giay
+@{
+    ViewData["Title"] = "ThemGiay";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<div class="col-md-12 text-center" style="margin-bottom: 20px;">
+    <h4 style="font-weight: 700;">Sửa giày</h4>
+</div>
+
+<form asp-action="SuaGiay" method="post" enctype="multipart/form-data" style="padding: 0 20px; width: 100%;">
+    <div class="form-row">
+        <div class="form-group col-md-8">
+            <label>Tên giày</label>
+            <input asp-for="TenGiay" type="text" class="form-control" placeholder="Nhập tên giày">
+        </div>
+        <div class="form-group col-md-4">
+            <label>Loại giày</label>
+            <select asp-for="LoaiGiayID" class="form-control">
+                @foreach (var lg in ViewBag.loaiGiay)
+                {
+                    <option value="@lg.LoaiGiayID">@lg.TenLoaiGiay</option>
+                }
+            </select>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Style</label>
+            <input asp-for="Style" type="text" class="form-control" placeholder="Nhập style">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Ảnh</label>
+            <div class="custom-file">
+                <input asp-for="Anh" type="file" class="custom-file-input">
+                <label class="custom-file-label">Chọn ảnh...</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Màu sắc</label>
+            <input asp-for="MauSac" type="text" class="form-control" placeholder="Nhập màu sắc">
+        </div>
+        <div class="form-group col-md-3">
+            <label>Giá</label>
+            <input asp-for="Gia" type="number" class="form-control" value="@(Convert.ToDouble(Model.Gia))">
+        </div>
+        <div class="form-group col-md-3">
+            <label>Trạng thái</label>
+            <select asp-for="TrangThai" class="form-control">
+                <option value="True">Còn hàng</option>
+                <option value="False">Hết hàng</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-12">
+            <label>Mô tả</label>
+            <input asp-for="MoTa" type="text" class="form-control" placeholder="Nhập mô tả">
+        </div>
+    </div>
+    <div class="col-md-12 text-center">
+        <button type="submit" class="btn btn-primary">Sửa giày</button>
+    </div>
+</form>
+

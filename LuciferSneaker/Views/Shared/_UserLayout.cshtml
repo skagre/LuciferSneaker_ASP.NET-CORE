@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lucifer Sneaker</title>
+    <link href="~/bootstrap-4.3.1-dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Muli', sans-serif;
+        }
+    </style>
+
+
+    <ul class="nav justify-content-center" style="background-color: #f97f51; line-height: 60px;">
+        <li class="nav-item">
+            <a class="nav-link" asp-action="Index">
+                <small style="color: white; font-weight: 700; font-size: 20px;">Lucifer Sneaker</small>
+            </a>
+        </li>
+        <li class="nav-item">
+            <div class="input-group" style="margin-top: 18px;">
+                <input type="text" class="form-control" placeholder="Tìm kiếm ..." style="width: 400px;">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary text-white" type="button" style="background-color: #f9a964; border: none;">Tìm kiếm</button>
+                </div>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" style="color: white; font-weight: 700;">Giỏ hàng</a>
+        </li>
+    </ul>
+
+    @RenderBody()
+
+    <div class="footer" style="height: 154px; background-color: #f97f51; text-align: center; padding: 20px; display: table; width: 100%;">
+        <div class="logo" style="display: table-cell; vertical-align: middle; width: 50%;">
+            <img src="~/images/shoes.svg" alt="ảnh lỗi" style="width: 58px;">
+            <p>Lucifer Sneaker | Shop Chuyên các sản phẩm về Sneakers và Fashions</p>
+        </div>
+        <div class="facebook" style="display: table-cell; width: 50%; float: right;">
+            <h5>Theo dõi trên facebook</h5>
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLucifer.Sneaker&tabs&width=340&height=154&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true" width="340" height="154" style="width: 100%;border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        </div>
+
+    </div>
+</body>
+</html>

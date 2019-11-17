@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<div class="container-fluid" style="margin: 50px 0;">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="row">
+                <div class="col-md-3" style="border-right: 1px solid black;">
+                    <h4>Hãng giày</h4>
+                    <ul style="list-style: none; ">
+                        @foreach (var lg in Model._LoaiGiay)
+                        {
+                            <li>
+                                <a href="#" style="text-transform: uppercase; text-decoration: none; color: black; font-weight: 700; font-size: 18px; padding: 5px 0; display: block; width: 100%;">@lg.TenLoaiGiay</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+                <div class="col-md-9">
+                    <div class="row">
+                        @foreach (var g in Model._Giay)
+                        {
+                            <div class="col-md-3" style="margin-bottom: 20px;">
+                                <a asp-action="ChiTietGiay" asp-route-id="@g.GiayID" style="text-decoration: none; color: black;">
+                                    <div class="card">
+                                        <img class="card-img-top" src="~/images/@g.Anh" alt="ảnh lỗi" style="padding: 15px; height: 180px; width: 100%;">
+                                        <div class="card-body" style="background-color: #f9f9f9;">
+                                            <h6 class="card-title" style="font-weight: 500;">@g.TenGiay</h6>
+                                            <p style="font-size: 20px; font-weight: 700;">@g.Gia.ToString("#,###") VND</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
