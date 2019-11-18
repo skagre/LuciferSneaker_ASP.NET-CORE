@@ -58,7 +58,7 @@ namespace LuciferSneaker.Controllers
         public IActionResult ThemGiay(Giay giay, IFormFile Anh)
         {
             _interfaceGiay.ThemGiay(giay, Anh);
-            return RedirectToAction("Index");
+            return RedirectToAction("Giay");
         }
         public IActionResult ChiTietGiay(int id)
         {
@@ -73,12 +73,12 @@ namespace LuciferSneaker.Controllers
         public IActionResult SuaGiay(Giay giay, int id, IFormFile Anh)
         {
             _interfaceGiay.SuaGiay(giay, id, Anh);
-            return RedirectToAction("Index");
+            return RedirectToAction("Giay");
         }
         public IActionResult XoaGiay(int id)
         {
             _interfaceGiay.XoaGiay(id);
-            return RedirectToAction("Index");
+            return RedirectToAction("Giay");
         }
         public IActionResult LoaiGiay()
         {

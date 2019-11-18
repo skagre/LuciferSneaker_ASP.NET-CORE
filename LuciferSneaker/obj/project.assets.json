@@ -13650,11 +13650,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\LuciferSneaker\\LuciferSneaker\\LuciferSneaker\\LuciferSneaker.csproj",
+      "projectUniqueName": "E:\\LuciferSneaker\\LuciferSneaker\\LuciferSneaker.csproj",
       "projectName": "LuciferSneaker",
-      "projectPath": "E:\\LuciferSneaker\\LuciferSneaker\\LuciferSneaker\\LuciferSneaker.csproj",
+      "projectPath": "E:\\LuciferSneaker\\LuciferSneaker\\LuciferSneaker.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\LuciferSneaker\\LuciferSneaker\\LuciferSneaker\\obj\\",
+      "outputPath": "E:\\LuciferSneaker\\LuciferSneaker\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

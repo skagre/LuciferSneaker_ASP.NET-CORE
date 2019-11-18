@@ -30,6 +30,15 @@ namespace LuciferSneaker.User.Controllers
             x._LoaiGiay = _interfaceLoaiGiay.LayTatCaLoaiGiay();
             return View(x);
         }
+        [HttpPost]
+        public IActionResult Index(string search)
+        {
+            ViewBag.x = search;
+            Giay_LoaiGiayViewModel x = new Giay_LoaiGiayViewModel();
+            x._Giay = _interfaceGiay.TimKiemGiay(search);
+            x._LoaiGiay = _interfaceLoaiGiay.LayTatCaLoaiGiay();
+            return View(x);
+        }
         public IActionResult ChiTietGiay(int id)
         {
             return View(_interfaceGiay.LayGiayTheoID(id));
@@ -91,5 +100,15 @@ namespace LuciferSneaker.User.Controllers
             _gioHang.XoaGioHang();
             return View("DatHangThanhCong");
         }
+        public IActionResult GiayTheoLoaiGiay(int id)
+        {
+            Giay_LoaiGiayViewModel x = new Giay_LoaiGiayViewModel();
+            x._Giay = _interfaceGiay.LayTatCaGiayTheoID(id);
+            x._LoaiGiay = _interfaceLoaiGiay.LayTatCaLoaiGiay();
+
+            return View(x);
+        }
+
+
     }
 }

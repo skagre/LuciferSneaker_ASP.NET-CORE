@@ -27,6 +27,16 @@ namespace LuciferSneaker.Repositories
             return _csdl._Giay;
         }
 
+        public IEnumerable<Giay> LayTatCaGiayTheoID(int id)
+        {
+            return _csdl._Giay.Where(x => x.LoaiGiayID == id).Select(x => x);
+        }
+
+        public IEnumerable<Giay> TimKiemGiay(string search)
+        {
+            return _csdl._Giay.Where(x => x.TenGiay.Contains(search)).Select(x => x);
+        }
+
         public void ThemAnh(Giay giay, IFormFile anh)
         {
             Random r = new Random();

@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "GiayTheoLoaiGiay";
     Layout = "~/Views/Shared/_UserLayout.cshtml";
 }
 
@@ -23,12 +23,6 @@
                     </ul>
                 </div>
                 <div class="col-md-9">
-                    <div class="col-md-12 text-center">
-                        @if (ViewBag.x != null)
-                        {
-                            <h4>Tìm kiếm: @ViewBag.x</h4>
-                        }
-                    </div>
                     <div class="row">
                         @foreach (var g in Model._Giay)
                         {
@@ -55,3 +49,4 @@
     </div>
 
 </div>
+

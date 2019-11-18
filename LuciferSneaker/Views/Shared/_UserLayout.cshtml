@@ -26,15 +26,17 @@
             </a>
         </li>
         <li class="nav-item">
-            <div class="input-group" style="margin-top: 18px;">
-                <input type="text" class="form-control" placeholder="Tìm kiếm ..." style="width: 400px;">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary text-white" type="button" style="background-color: #f9a964; border: none;">Tìm kiếm</button>
+            <form asp-action="Index" method="post">
+                <div class="input-group" style="margin-top: 18px;">
+                    <input name="search" type="text" class="form-control" placeholder="Tìm kiếm ..." style="width: 400px;">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary text-white" type="submit" style="background-color: #f9a964; border: none;">Tìm kiếm</button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#" style="color: white; font-weight: 700;">Giỏ hàng</a>
+            <a asp-action="GioHang" class="nav-link" style="color: white; font-weight: 700;">Giỏ hàng</a>
         </li>
     </ul>
 

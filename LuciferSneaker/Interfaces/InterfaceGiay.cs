@@ -11,6 +11,8 @@ namespace LuciferSneaker.Interfaces
     {
         Giay LayGiayTheoID(int id);
         IEnumerable<Giay> LayTatCaGiay();
+        IEnumerable<Giay> LayTatCaGiayTheoID(int id);
+        IEnumerable<Giay> TimKiemGiay(string search);
         void ThemAnh(Giay giay, IFormFile anh);
         Giay ThemGiay(Giay giay, IFormFile anh);
         Giay SuaGiay(Giay giay, int id, IFormFile anh);
