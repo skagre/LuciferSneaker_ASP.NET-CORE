@@ -72,6 +72,7 @@ namespace LuciferSneaker.Repositories
                 ThemAnh(giay, anh);
                 g.Anh = giay.Anh;
                 g.MoTa = giay.MoTa;
+		g.LoaiGiayID = giay.LoaiGiayID;
 
                 _csdl.SaveChanges();
 
