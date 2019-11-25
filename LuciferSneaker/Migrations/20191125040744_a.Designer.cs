@@ -11,7 +11,7 @@ using System;
 namespace LuciferSneaker.Migrations
 {
     [DbContext(typeof(CSDL))]
-    [Migration("20191121094115_a")]
+    [Migration("20191125040744_a")]
     partial class a
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
